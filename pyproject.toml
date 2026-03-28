@@ -12,7 +12,7 @@ dependencies = [
     "numpy>=2.3.2",
     "pandas>=2.3.1",
     "pyaml>=25.7.0",
-    "pymongo[srv]>=4.14.1",
+    "pymongo[srv]==3.12",
     "python-dotenv>=1.1.1",
     "python-multipart>=0.0.20",
     "scikit-learn>=1.7.1",
