@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "certifi>=2025.8.3",
     "dagshub>=0.6.3",
+    "dill>=0.4.1",
     "fastapi>=0.116.1",
     "mlflow>=3.3.1",
     "numpy>=2.3.2",
@@ -15,6 +16,7 @@ dependencies = [
     "pymongo[srv]==3.12",
     "python-dotenv>=1.1.1",
     "python-multipart>=0.0.20",
+    "pyyaml>=6.0.2",
     "scikit-learn>=1.7.1",
     "setuptools>=82.0.1",
     "uvicorn>=0.35.0",
