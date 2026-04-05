@@ -1,0 +1,10 @@
+artifact_location: file:///D:/Saurabh%20Pandey/Network-Security/mlruns/0/models/m-6528e1e5d0b447f7a693a7d01bc7b41a/artifacts
+creation_timestamp: 1775390620755
+experiment_id: '0'
+last_updated_timestamp: 1775390622718
+model_id: m-6528e1e5d0b447f7a693a7d01bc7b41a
+model_type: null
+name: model
+source_run_id: 03e1b220aace4c8aae838017e2c856b0
+status: 2
+status_message: null
