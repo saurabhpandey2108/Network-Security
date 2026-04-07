@@ -26,12 +26,12 @@ from sklearn.ensemble import (
 import mlflow
 from urllib.parse import urlparse
 
-# import dagshub
-# #dagshub.init(repo_owner='krishnaik06', repo_name='networksecurity', mlflow=True)
+import dagshub
+dagshub.init(repo_owner='saurabhpandey2108', repo_name='Network-Security', mlflow=True)
 
-# os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/krishnaik06/networksecurity.mlflow"
-# os.environ["MLFLOW_TRACKING_USERNAME"]="krishnaik06"
-# os.environ["MLFLOW_TRACKING_PASSWORD"]="7104284f1bb44ece21e0e2adb4e36a250ae3251f"
+os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/saurabhpandey2108/Network-Security.mlflow"
+os.environ["MLFLOW_TRACKING_USERNAME"]="saurabhpandey2108"
+os.environ["MLFLOW_TRACKING_PASSWORD"]="65b271846a1e7b1cfdf0b25e251455d61da1fb8c"
 
 
 
@@ -46,8 +46,8 @@ class ModelTrainer:
             raise NetworkSecurityException(e,sys)
         
     def track_mlflow(self,best_model,classificationmetric):
-        # mlflow.set_registry_uri("https://dagshub.com/krishnaik06/networksecurity.mlflow")
-        # tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+        mlflow.set_registry_uri("https://dagshub.com/saurabhpandey2108/Network-Security.mlflow")
+        tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
         with mlflow.start_run():
             f1_score=classificationmetric.f1_score
             precision_score=classificationmetric.precision_score
@@ -73,6 +73,7 @@ class ModelTrainer:
 
         
     def train_model(self,X_train,y_train,x_test,y_test):
+        logging.info("Starting model training. Please note that Grid Search CV could take 10+ minutes to complete...")
         models = {
                 "Random Forest": RandomForestClassifier(verbose=1),
                 "Decision Tree": DecisionTreeClassifier(),
@@ -137,8 +138,9 @@ class ModelTrainer:
         model_dir_path = os.path.dirname(self.model_trainer_config.trained_model_file_path)
         os.makedirs(model_dir_path,exist_ok=True)
 
+        logging.info("Starting model training and evaluating grid search parameters...")
         Network_Model=NetworkModel(preprocessor=preprocessor,model=best_model)
-        save_object(self.model_trainer_config.trained_model_file_path,obj=NetworkModel)
+        save_object(self.model_trainer_config.trained_model_file_path,obj=Network_Model)
         #model pusher
         save_object("final_model/model.pkl",best_model)
         
