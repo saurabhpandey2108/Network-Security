@@ -1,0 +1,28 @@
+[ 2026-04-08 04:28:45,614 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-04-08 04:28:45,617 ] 107 dagshub - INFO - Accessing as saurabhpandey2108
+[ 2026-04-08 04:28:46,503 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/saurabhpandey2108/Network-Security "HTTP/1.1 200 OK"
+[ 2026-04-08 04:28:47,305 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-04-08 04:28:47,306 ] 107 dagshub - INFO - Initialized MLflow to track repo "saurabhpandey2108/Network-Security"
+[ 2026-04-08 04:28:47,306 ] 107 dagshub - INFO - Repository saurabhpandey2108/Network-Security initialized!
+[ 2026-04-08 04:29:04,658 ] 42 root - INFO - Start data Ingestion
+[ 2026-04-08 04:29:09,056 ] 65 root - INFO - Performed train test split on the dataframe
+[ 2026-04-08 04:29:09,056 ] 67 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2026-04-08 04:29:09,057 ] 75 root - INFO - Exporting train and test file path.
+[ 2026-04-08 04:29:09,141 ] 84 root - INFO - Exported train and test file path.
+[ 2026-04-08 04:29:09,142 ] 45 root - INFO - Data Ingestion completed and artifact: DataIngestionArtifact(trained_file_path='Artifacts\\04_08_2026_04_28_42\\data_ingestion\\ingested\\train.csv', test_file_path='Artifacts\\04_08_2026_04_28_42\\data_ingestion\\ingested\\test.csv')
+[ 2026-04-08 04:29:09,150 ] 55 root - INFO - Initiate the data Validation
+[ 2026-04-08 04:29:09,183 ] 32 root - INFO - Required number of columns:2
+[ 2026-04-08 04:29:09,183 ] 33 root - INFO - Data frame has columns:31
+[ 2026-04-08 04:29:09,183 ] 32 root - INFO - Required number of columns:2
+[ 2026-04-08 04:29:09,183 ] 33 root - INFO - Data frame has columns:31
+[ 2026-04-08 04:29:09,183 ] 53 root - INFO - All required numerical columns are present.
+[ 2026-04-08 04:29:09,185 ] 53 root - INFO - All required numerical columns are present.
+[ 2026-04-08 04:29:09,461 ] 63 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[ 2026-04-08 04:29:09,461 ] 65 root - INFO - Starting data transformation
+[ 2026-04-08 04:29:09,499 ] 48 root - INFO - Entered get_data_trnasformer_object method of Trnasformation class
+[ 2026-04-08 04:29:09,500 ] 53 root - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2026-04-08 04:29:09,518 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2026-04-08 04:29:09,524 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2026-04-08 04:29:09,524 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2026-04-08 04:29:09,528 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2026-04-08 04:29:09,533 ] 76 root - INFO - Starting model training. Please note that Grid Search CV could take 10+ minutes to complete...
